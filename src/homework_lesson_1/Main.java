@@ -35,6 +35,7 @@ public class Main {
         box1.addFruit(apples);
         box2.addFruit(oranges);
         box3.addFruit(apples2);
+        box1.addFruit(apple1);
         box1.copyFrom(box3);
 
         System.out.println(box1.BoxWeight());

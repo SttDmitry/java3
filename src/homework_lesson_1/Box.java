@@ -31,7 +31,24 @@ public class Box<T extends Fruit> {
     }
 
     public void addFruit ( T... arr) {
-        Collections.addAll(this.arr, arr);
+        if (this.arr.size() == 0) {
+            Collections.addAll(this.arr, arr);
+        } else {
+            for (int i = 0; i < arr.length; i++) {
+                int c=0;
+                for (int j = 0; j < this.arr.size(); j++) {
+                    if (this.arr.get(j) == arr[i]) {
+                        c++;
+                    }
+                }
+                if (c == 0) {
+                    this.arr.add(arr[i]);
+                } else {
+                    System.out.println(arr[i] + " уже имеется в коробке");
+                }
+            }
+        }
+
     }
 
 
