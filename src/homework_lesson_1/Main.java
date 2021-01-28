@@ -29,9 +29,12 @@ public class Main {
         Apple[] apples2 = new Apple[]{apple3};
         Orange[] oranges = new Orange[]{orange1, orange2};
 
-        Box<Apple> box1 = new Box(apples);
-        Box<Orange> box2 = new Box(oranges);
-        Box<Apple> box3 = new Box(apples2);
+        Box<Apple> box1 = new Box();
+        Box<Orange> box2 = new Box();
+        Box<Apple> box3 = new Box();
+        box1.addFruit(apples);
+        box2.addFruit(oranges);
+        box3.addFruit(apples2);
         box1.copyFrom(box3);
 
         System.out.println(box1.BoxWeight());

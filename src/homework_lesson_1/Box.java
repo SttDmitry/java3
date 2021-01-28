@@ -1,13 +1,17 @@
 package homework_lesson_1;
 
+
+
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 
 public class Box<T extends Fruit> {
     private ArrayList<T> arr;
 
-    public Box(T... arr) {
-        this.arr = new ArrayList<>(Arrays.asList(arr));
+
+
+    public Box() {
+        this.arr = new ArrayList<>();
     }
 
     public float BoxWeight (){
@@ -24,6 +28,10 @@ public class Box<T extends Fruit> {
 
         this.arr.addAll(another.arr);
         another.arr.clear();
+    }
+
+    public void addFruit ( T... arr) {
+        Collections.addAll(this.arr, arr);
     }
 
 
