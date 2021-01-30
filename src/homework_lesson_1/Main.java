@@ -32,14 +32,16 @@ public class Main {
         Box<Apple> box1 = new Box();
         Box<Orange> box2 = new Box();
         Box<Apple> box3 = new Box();
+        Box<Orange> box4 = new Box(apple1);
         box1.addFruit(apples);
         box2.addFruit(oranges);
         box3.addFruit(apples2);
-        box1.addFruit(apple1);
+        box1.addFruit(apples);
         box1.copyFrom(box3);
 
         System.out.println(box1.BoxWeight());
         System.out.println(box2.BoxWeight());
+        System.out.println(box4.BoxWeight());
         System.out.println(box1.compareTo(box2));
     }
 

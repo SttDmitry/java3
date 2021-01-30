@@ -3,6 +3,7 @@ package homework_lesson_1;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class Box<T extends Fruit> {
@@ -12,6 +13,10 @@ public class Box<T extends Fruit> {
 
     public Box() {
         this.arr = new ArrayList<>();
+    }
+
+    public Box(T... arr) {
+        this.arr = new ArrayList<>(Arrays.asList(arr));
     }
 
     public float BoxWeight (){
